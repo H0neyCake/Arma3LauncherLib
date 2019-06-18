@@ -13,6 +13,10 @@ namespace DerAtrox.Arma3LauncherLib.Model {
         /// Use -nopause start parameter to skip something.
         /// </summary>
         public bool NoPause { get; set; } = false;
+
+        public bool EnableHT { get; set; } = false;
+
+        public bool EmptyWorld { get; set; } = false;
         /// <summary>
         /// Use -showscripterrors start parameter to display script errors.
         /// </summary>
@@ -21,6 +25,8 @@ namespace DerAtrox.Arma3LauncherLib.Model {
         /// Use -windowed start parameter to start Arma in windowed mode.
         /// </summary>
         public bool Windowed { get; set; } = false;
+
+        public bool NoLogs { get; set; } = false;
         /// <summary>
         /// Use -maxMem=x start parameter to specify max ram. To disable set it lesser 0.
         /// </summary>
@@ -29,6 +35,12 @@ namespace DerAtrox.Arma3LauncherLib.Model {
         /// Use -maxVRam=x start parameter to specify max video memory. To disable set it lesser 0.
         /// </summary>
         public int MaxVideoMemory { get; set; } = -1;
+
+        public int CPUcount { get; set; } = -1;
+
+        public int ConnectIP { get; set; } = -1;
+
+        public int Port { get; set; } = -1;
         /// <summary>
         /// Use additional start parameters.
         /// </summary>

@@ -70,8 +70,22 @@ namespace DerAtrox.Arma3LauncherLib.Model {
                 args.Add("-showScriptErrors");
             }
 
+             if (startSettings.EnableHT) {
+                args.Add("-enableHT");
+            }
+
             if (startSettings.Windowed) {
                 args.Add("-window");
+            }
+
+            if (startSettings.NoLogs)
+            {
+                args.Add("-noLogs");
+            }
+
+            if (startSettings.EmptyWorld)
+            {
+                args.Add("-world=empty");
             }
 
             if (startSettings.MaxMemory >= 0) {
@@ -82,6 +96,20 @@ namespace DerAtrox.Arma3LauncherLib.Model {
                 args.Add("-maxVRAM=" + startSettings.MaxVideoMemory);
             }
 
+            if (startSettings.ConnectIP >= 0)
+            {
+                args.Add("-connect= " + startSettings.ConnectIP);
+            }
+
+            if (startSettings.Port >= 0)
+            {
+                args.Add("-port=" + startSettings.Port);
+            }
+
+            if (startSettings.CPUcount >= 0)
+            {
+                args.Add("-cpuCount=" + startSettings.CPUcount);
+            }
             if (startSettings.Mods.Count > 0) {
                 string mods = "-mod=\"";
                 mods += string.Join(";", startSettings.Mods);
